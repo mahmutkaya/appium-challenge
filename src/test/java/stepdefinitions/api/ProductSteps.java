@@ -5,14 +5,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
-import static org.hamcrest.Matchers.*;
-
 import pojos.Product;
 import utilities.ApiUtils;
 import utilities.ConfigReader;
 
 import java.util.List;
+
+import static org.hamcrest.Matchers.*;
 
 public class ProductSteps {
 

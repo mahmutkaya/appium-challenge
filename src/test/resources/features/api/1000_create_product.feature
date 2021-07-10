@@ -1,4 +1,4 @@
-@smoke @api @createProduct_api
+@smoke @api @createProduct
 Feature: Create Product - api
 
   Scenario Outline: Create product <testCase> <expectedResult>

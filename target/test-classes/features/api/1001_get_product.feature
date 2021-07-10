@@ -1,4 +1,4 @@
-@smoke @api @getProduct_api
+@smoke @api @getProduct
 Feature: Get Product - api
 
   Background:

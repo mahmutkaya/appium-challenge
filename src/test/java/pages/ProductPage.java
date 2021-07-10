@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 import utilities.AppiumUtils;
 import utilities.Driver;
+import utilities.Helpers;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Map;
 
 public class ProductPage {
     public ProductPage() {
-        PageFactory.initElements(new AppiumFieldDecorator(Driver.driver), this);
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
     @AndroidFindBy(id = "com.example.challenge:id/goBack")
@@ -32,7 +33,7 @@ public class ProductPage {
     MobileElement productPrice;
 
     @AndroidFindBy(id = "com.example.challenge:id/reviewsRecycler")
-    MobileElement reviewsRecycler;
+    public MobileElement reviewsRecycler;
 
     @AndroidFindBy(id = "com.example.challenge:id/addReview")
     MobileElement addReview;
@@ -54,7 +55,7 @@ public class ProductPage {
 
     public void clickProductByName(String productName) {
         //Todo: use productName to scroll if we are able to display the product we created
-        AppiumUtils.scrollTo("product").click();
+        AppiumUtils.scrollTo("Musty Bridge").click();
     }
 
     public Map<String, String> getProductAttributes() {
@@ -89,6 +90,11 @@ public class ProductPage {
 
         saveReview.click();
     }
+
+    public String generateReview(String reviewTxt){
+        return reviewTxt += " - "+ Helpers.generateDate();
+    }
+
 
     public void goBack() {
         boolean isDisplay = AppiumUtils.isElementVisible(goBackBtn);

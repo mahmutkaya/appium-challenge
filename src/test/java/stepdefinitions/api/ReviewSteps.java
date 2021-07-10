@@ -12,7 +12,6 @@ import utilities.ConfigReader;
 import java.util.List;
 
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.is;
 
 public class ReviewSteps {
 

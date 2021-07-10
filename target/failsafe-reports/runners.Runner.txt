@@ -1,0 +1,166 @@
+-------------------------------------------------------------------------------
+Test set: runners.Runner
+-------------------------------------------------------------------------------
+Tests run: 39, Failures: 0, Errors: 39, Skipped: 0, Time elapsed: 5.225 s <<< FAILURE! - in runners.Runner
+Home Screen.Home Screen Elements  Time elapsed: 1.016 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Home Screen.Home Screen Elements  Time elapsed: 1.019 s  <<< ERROR!
+java.lang.NullPointerException
+
+Search products.Search WITH NAME (first word) IS SUCCESS  Time elapsed: 0.073 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Search products.Search WITH NAME (first word) IS SUCCESS  Time elapsed: 0.073 s  <<< ERROR!
+java.lang.NullPointerException
+
+Search products.Search WITH NAME (last word) IS SUCCESS  Time elapsed: 0.026 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Search products.Search WITH NAME (last word) IS SUCCESS  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.NullPointerException
+
+Search products.Search WITH NAME (all words) IS SUCCESS  Time elapsed: 0.022 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Search products.Search WITH NAME (all words) IS SUCCESS  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.NullPointerException
+
+Search products.Search WITH DESCRIPTION (first word) IS SUCCESS  Time elapsed: 0.037 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Search products.Search WITH DESCRIPTION (first word) IS SUCCESS  Time elapsed: 0.037 s  <<< ERROR!
+java.lang.NullPointerException
+
+Search products.Search WITH DESCRIPTION (last word) IS SUCCESS  Time elapsed: 0.028 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Search products.Search WITH DESCRIPTION (last word) IS SUCCESS  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.NullPointerException
+
+Search products.Search WITH DESCRIPTION (all words) IS SUCCESS  Time elapsed: 0.024 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Search products.Search WITH DESCRIPTION (all words) IS SUCCESS  Time elapsed: 0.024 s  <<< ERROR!
+java.lang.NullPointerException
+
+Product Screen.Product Screen Test  Time elapsed: 0.033 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Product Screen.Product Screen Test  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.NullPointerException
+
+Review.Add Review Test  Time elapsed: 0.029 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused (Connection refused)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'mahmuts-MBP', ip: 'fd1c:1386:d350:4e00:e:2375:e233:4571%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_291'
+Driver info: driver.version: Driver
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+
+Review.Add Review Test  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITHOUT ID FAILS  Time elapsed: 2.055 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITHOUT NAME FAILS  Time elapsed: 0.066 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITHOUT DESCRIPTION FAILS  Time elapsed: 0.084 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITHOUT CURRENCY FAILS  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITHOUT PRICE FAILS  Time elapsed: 0.051 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITHOUT IMAGE URL FAILS  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITH ALL REQUIRED FIELDS IS SUCCESSFUL  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.NullPointerException
+
+Create Product - api.Create product WITH EXISTING PRODUCT ATTRIBUTES FAILS  Time elapsed: 0.035 s  <<< ERROR!
+java.lang.NullPointerException
+
+Get Product - api.GET BY ID  Time elapsed: 0.036 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITHOUT ID FAILS  Time elapsed: 0.045 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITHOUT NAME FAILS  Time elapsed: 0.034 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITHOUT DESCRIPTION FAILS  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITHOUT CURRENCY FAILS  Time elapsed: 0.037 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITHOUT PRICE FAILS  Time elapsed: 0.049 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITHOUT IMAGE URL FAILS  Time elapsed: 0.04 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITH ALL REQUIRED FIELDS IS SUCCESSFUL  Time elapsed: 0.062 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #1.Update product WITH EXISTING PRODUCT ATTRIBUTES FAILS  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.NullPointerException
+
+Update Product - api #2.DELETE BY ID  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.NullPointerException
+
+Add Review - api.Add review WITHOUT RATING FAILS  Time elapsed: 0.03 s  <<< ERROR!
+java.lang.NullPointerException
+
+Add Review - api.Add review WITHOUT TEXT FAILS  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.NullPointerException
+
+Add Review - api.Add review WITH ALL REQUIRED FIELDS IS SUCCESSFUL  Time elapsed: 0.047 s  <<< ERROR!
+java.lang.NullPointerException
+

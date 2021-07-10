@@ -1,4 +1,4 @@
-@smoke @api @updateProduct_api
+@smoke @api @updateProduct
 Feature: Update Product - api
 
   Background:

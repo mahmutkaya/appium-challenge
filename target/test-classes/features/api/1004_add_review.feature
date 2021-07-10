@@ -1,4 +1,4 @@
-@smoke @api @addReview_api
+@smoke @api @addReview
 Feature: Add Review - api
 
   Background:

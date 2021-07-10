@@ -41,7 +41,7 @@ public class HomeSteps {
     public void the_more_options_dropdown_has_option(List<String> options) {
         List<String> optionsTxt = homePage.optionsText();
         //close dropdown after getting options text - for not interrupting next steps
-        Driver.driver.navigate().back();
+        Driver.getDriver().navigate().back();
         Assert.assertEquals(optionsTxt, options);
     }
 

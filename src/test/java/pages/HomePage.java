@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class HomePage {
     public HomePage() {
-        PageFactory.initElements(new AppiumFieldDecorator(Driver.driver), this);
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
     @AndroidFindBy(id = "com.example.challenge:id/toolbar")

@@ -1,14 +1,8 @@
 package utilities;
 
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.android.AndroidDriver;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,7 +23,7 @@ public class AppiumUtils {
 
     //===============Explicit Wait==============//
     public static MobileElement waitForVisibility(MobileElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.driver, timeout);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return (MobileElement) wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -46,13 +40,19 @@ public class AppiumUtils {
     }
 
     public static MobileElement scrollTo(String visibleText) {
-        return Driver.driver
-                .findElementByAndroidUIAutomator(
-                        "new UiScrollable(" +
-                                "new UiSelector().scrollable(true).instance(0))" +
-                                ".scrollIntoView(new UiSelector()" +
-                                ".textContains(\"" + visibleText + "\").instance(0))"
-                );
+        MobileElement el = null;
+        try{
+            el = ((AndroidDriver<MobileElement>) Driver.getDriver())
+                    .findElementByAndroidUIAutomator(
+                            "new UiScrollable(" +
+                                    "new UiSelector().scrollable(true).instance(0))" +
+                                    ".scrollIntoView(new UiSelector()" +
+                                    ".textContains(\"" + visibleText + "\").instance(0))"
+                    );
+        }catch(org.openqa.selenium.NoSuchElementException e){
+            System.out.println("an element with "+visibleText+" could not be located");
+        }
+        return el;
     }
 
     public static void clickListElementByText(

@@ -14,14 +14,14 @@ public class Hooks {
     @Before
     public void setUp(Scenario scenario) {
         isAPI = scenario.getSourceTagNames().contains("@api");
-        if(!isAPI) Driver.setUp();
+        if(!isAPI) Driver.getDriver();
     }
 
     @After
     public void tearDown(Scenario scenario) {
         if (!isAPI && scenario.isFailed()) {
             final byte[] screenshot = (
-                    (TakesScreenshot) Driver.driver
+                    (TakesScreenshot) Driver.getDriver()
             ).getScreenshotAs(OutputType.BYTES);
 
             scenario.attach(screenshot, "image/png", "screenshot");

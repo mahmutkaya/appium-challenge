@@ -1,5 +1,6 @@
 package utilities;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -11,40 +12,44 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    public static AndroidDriver<MobileElement> driver;
-    private static DesiredCapabilities desiredCapabilities;
-
-    public static void main(String[] args) {
-        setUp();
+    private Driver() {
     }
 
-    public static void setUp() {
-        try {
-            File classpathRoot = new File(System.getProperty("user.dir"));
-            File app = new File(classpathRoot, ConfigReader.getProperty("app"));
+    private static AppiumDriver<MobileElement> driver;
 
-            desiredCapabilities = new DesiredCapabilities();
+    public static AppiumDriver<MobileElement> getDriver() {
+        //If the driver is already pointing somewhere( being used )
+        //We want to have only one driver
+        if (driver == null) {
+            try {
+                File classpathRoot = new File(System.getProperty("user.dir"));
+                File app = new File(classpathRoot, ConfigReader.getProperty("app"));
 
-            desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
-            desiredCapabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
-            desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
-            desiredCapabilities.setCapability("app", app.getAbsolutePath());
-            desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("appPackage"));
-            desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("appActivity"));
+                DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
-            driver = new AndroidDriver<>(new URL(ConfigReader.getProperty("url")), desiredCapabilities);
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
+                desiredCapabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
+                desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
+                desiredCapabilities.setCapability("app", app.getAbsolutePath());
+                desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("appPackage"));
+                desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("appActivity"));
 
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+                URL url = new URL(ConfigReader.getProperty("url"));
+                driver = new AndroidDriver<>(url, desiredCapabilities);
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        return driver;
     }
 
     public static void closeDriver() {
         //Close driver if it is not null
-        if (driver!=null) {
+        if (driver != null) {
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
 
